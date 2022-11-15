@@ -21,5 +21,11 @@
     "48": "./images/a-48.png",
     "128": "./images/a-128.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["./popup.js"]
+    }
+  ],
   "permissions": ["storage", "activeTab", "scripting"]
 }

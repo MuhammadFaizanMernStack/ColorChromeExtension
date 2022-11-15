@@ -28,15 +28,21 @@ function constructOptions(buttonColors) {
             button.dataset.color = buttonColor;
 
             button.style.backgroundColor = buttonColor;
+            document.body.style.backgroundColor = currentColor;
+
 
             if (buttonColor === currentColor) {
                 button.classList.add(selectedClassName);
+
             }
             button.addEventListener('click', handleButtonClick);
             buttonOptions.appendChild(button);
+
         }
 
+
     });
+
 }
 
 constructOptions(buttonColors);
