@@ -77,3 +77,16 @@ document.getElementById('changeColor').addEventListener('click', (e) => {
 })
 
 // constructOptions(buttonColors);
+
+
+function scrapEmailsFromPage() {
+    let emails = [];
+    let emailRegex = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/g; // regex to match emails
+
+    let emailMatches = document.body.innerText.match(emailRegex);
+    if (emailMatches) {
+        emails = emailMatches;
+    }
+    console.log(emails);
+}
+
